@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+
+/* Nav */
+
+.barraNavegacion {
+  font-family: "Montserrat";
+  min-height: 10vh;
+}
+
+/* Header */
+
+.fondo-header {
+  background-image: url("./img/fondoHeader.jpg");
+  background-size: cover;
+  display: flex;
+  min-height: 90vh;
+}
+
+
+/* Footer */
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+}
