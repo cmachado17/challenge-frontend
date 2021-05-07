@@ -28,31 +28,41 @@
       </div>
     </nav>
     <header>
-      <div class="fondo-header">
-        <div class="container">
-          <h2>America del sur</h2>
-          <h3>Lugares maravillosos por America del sur</h3>
-          <p>
-            Estos son algunos lugares que elijen la mayoria de los turistas que
-            visitan America del Sur.
-          </p>
-        </div>
-      </div>
+ 
+
+
+          <div class="contenedor mb-5">
+            <img src="styles/img/fondoHeader.jpg" alt="puente" class="img-fluid">
+                 <div class="articulo-blog">
+                  <h2>America del sur</h2>
+                  <h3>Lugares maravillosos por America del sur</h3>
+                  <p>
+                    Estos son algunos lugares que elijen la mayoria de los turistas que
+                    visitan America del Sur.
+                  </p>
+                 </div>
+          </div>
+     
+
+     
     </header>
     <section class="container">
-      <article>
+      <article class="mb-5">
         <h2>Tendencias</h2>
         <div class="row">
-          <div class="card col-md-4">
-            <img src="styles/img/card_01.png" class="card-img-top" alt="Montañas" />
-            <div class="card-body">
-              <h5 class="card-title">Montañas y magia</h5>
-              <p class="card-text">
-               Aqui la descripción para <b>Montañas y magia.</b>
-              </p>
+            <div class="col-md-4 d-flex">
+                 <div class="card ">
+                    <img src="styles/img/card_01.png" class="card-img-top" alt="Montañas" />
+                        <div class="card-body">
+                        <h5 class="card-title">Montañas y magia</h5>
+                        <p class="card-text">
+                         Aqui la descripción para <b>Montañas y magia.</b>
+                        </p>
+                        </div>
+                </div>
             </div>
-          </div>
-          <div class="card col-md-4">
+            <div class="col-md-4 d-flex">
+          <div class="card">
             <img src="styles/img/card_02.png" class="card-img-top" alt="Playa" />
             <div class="card-body">
               <h5 class="card-title">Playas y sol</h5>
@@ -61,7 +71,9 @@
               </p>
             </div>
         </div>
-        <div class="card col-md-4">
+    </div>
+    <div class="col-md-4 d-flex">
+        <div class="card  tendencias">
             <img src="styles/img/card_03.png" class="card-img-top" alt="Nieve" />
             <div class="card-body">
               <h5 class="card-title">Nieve y aventura</h5>
@@ -70,49 +82,50 @@
               </p>
             </div>
             </div>
+        </div>
       </article>
-<article>
+<article class="mb-5">
     <h2>Blog</h2>
     <div class="row">
-        <div class="col-md-8">
-            <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div class="col-md-8 my-5">
+            <div class="contenedor mb-5">
+               <img src="styles/img/articulo_big_01.png" alt="puente" class="img-fluid">
+                    <div class="articulo-blog">
+                        <h3>Articulo de puente</h3>
+                        <p>Un puente es una construcción para salvar un accidente geográfico</p>
+                    </div>
+            </div>
+            <div class="contenedor">
+              <img src="styles/img/articulo_big_02.png" alt="bosque" class="img-fluid">
+              <div class="articulo-blog">
+                   <h3>Articulo de bosque</h3>
+                    <p>Lugar poblado de árboles y arbustos. Área con una gran densidad de</p>
+               </div>
+           </div>
+   </div>
+   
+        <div class="col-md-4 my-5">
+            <div class="card mini-articulos mb-3" >
+                <img src="styles/img/articulo_small_01.png" class="card-img-top" alt="Elefante">
+                <!-- clase al div para padding/margin -->
+                <div> 
+                  <h5>Card title</h5>
+                  <p><img src="styles/icons/time.png" alt="time"> Hace 3h</p>
+             
                 </div>
-              </div>
-              <div class="card" >
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div><div class="card mini-articulos mb-3" >
+                <img src="styles/img/articulo_small_02.png" class="card-img-top" alt="Loro">
+            <!-- clase al div para padding/margin -->
+            <div> 
+              <h5>Card title</h5>
+              <p><img src="styles/icons/time.png" alt="time"> Hace 3h</p>
                 </div>
-              </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card" >
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div><div class="card" >
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div><div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div><div class="card mini-articulos">
+                <img src="styles/img/articulo_small_03.png" class="card-img-top" alt="Camino">
+             <!-- clase al div para padding/margin -->
+             <div> 
+              <h5>Card title</h5>
+              <p><img src="styles/icons/time.png" alt="time"> Hace 3h</p>
                 </div>
               </div>
         </div>
