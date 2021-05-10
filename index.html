@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,61 +8,67 @@
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous" />
+    <!-- Estilos -->
   <link rel="stylesheet" href="styles/styles.css" />
 </head>
-
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light barraNavegacion">
+  <div id="main" class="p-0">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light barraNavegacion sticky-top">
     <div class="container">
       <a href="" class="navbar-brand"><img src="styles/logo/logo_01.png" alt="logo" /></a>
+      <div class="menu-normal">
       <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
         <li class="nav-item"><a href="#" class="nav-link active">HOME</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">TENDENCIAS</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">BLOG</a></li>
+        <li class="nav-item"><a href="#tendencias" class="nav-link">TENDENCIAS</a></li>
+        <li class="nav-item"><a href="#blog" class="nav-link">BLOG</a></li>
       </ul>
+    </div>
+      <div class="barra-lateral">
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="#">HOME</a>
+          <a href="#tendencias">TENDENCIAS</a>
+          <a href="#blog">BLOG</a>
+        </div>
+        <span onclick="openNav()"><img src="styles/img/hamburgermenu.png" alt="menu" class="boton-hamburguesa"></span>
+      </div>
     </div>
   </nav>
   <header>
- 
     <div class="fondo-header contenedor">
       <img src="styles/img/fondoHeader.jpg" alt="puente" class="w-100 img-fluid">
-  
-          <div class="descripcion-header w-100">
-      <div class="container">
-              <div class="texto-header">
-                <img src="styles/icons/ic_pin.png" alt="Place" class="img-fluid"><h2>America del sur</h2>
-             
-              <hr />
-              <div>
-                <h3>Lugares maravillosos por America del sur</h3>
-                <p>
-                   Estos son algunos lugares que elijen la mayoria de los turistas que
-                    visitan America del Sur.
-                </p>
-              </div>
-         </div>
-            
-            <div class="row">
-              <div class="col-8">
-                asd
-              </div>
-            <div class="col-4">
-              <div class="recuadro-header px-5 py-3 ">
-                <div>
-                 <h4>PROXIMA AVENTURA</h3>
-                  <img src="styles/icons/arrow.png" alt="arrow">
+          <div class="descripcion-header w-100 ">
+              <div class="container h-100 contenido-header">
+                <div class="texto-header">
+                 <h2><img src="styles/icons/ic_pin.png" alt="Place" class="img-fluid">    AMERICA DEL SUR</h2>
+                  <hr />
+                  <div>
+                    <h3>Lugares maravillosos por America del Sur</h3>
+                    <p>
+                      Estos son algunos lugares que elijen la mayoria de los turistas que
+                      visitan America del Sur.
+                    </p>
+                  </div>
                 </div>
-                <h5>Europa Meridional</h4>
-                <p>Forman parte veinte países, ej. España, Francia, etc.</p>
+                <div class="row pb-5">
+                  <div class="col-8">
+                  </div>
+                  <div class="col-4">
+                    <div class="recuadro-header px-5 py-3 w-60">
+                      <div>
+                        <h4>PROXIMA AVENTURA <img src="styles/icons/arrow.png" alt="arrow"></h4>
+                      </div>
+                        <h5>Europa Meridional</h4>
+                        <p>Forman parte veinte países,<br> ej. España, Francia, etc.</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-            </div>
-          </div>
           </div>
     </div>
   </header>
   <section>
-    <div class="tendencias py-5">
+    <div class="tendencias py-5" id="tendencias">
     <article class="container mb-5">
       <h2>TENDENCIAS</h2>
       <div class="row mt-3">
@@ -76,10 +81,13 @@
                 Aqui la descripción para <b>Montañas y magia.</b>
               </p>
             </div>
+            <div class="cartel-nuevo">
+              <p>NUEVO</p>
+            </div>
           </div>
         </div>
-        <div class="col-md-4 d-flex">
-          <div class="card w-100 carta-tendencias">
+        <div class="col-md-4 d-flex ">
+          <div class="card w-100 carta-tendencias ocultar-tendencias">
             <img src="styles/img/card_02.png" class="card-img-top" alt="Playa" />
             <div class="card-body mt-3">
               <h5 class="card-title">Playas y sol</h5>
@@ -89,8 +97,8 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4 d-flex">
-          <div class="card w-100 carta-tendencias">
+        <div class="col-md-4 d-flex ">
+          <div class="card w-100 carta-tendencias ocultar-tendencias">
             <img src="styles/img/card_03.png" class="card-img-top" alt="Nieve" />
             <div class="card-body mt-3">
               <h5 class="card-title">Nieve y aventura</h5>
@@ -102,12 +110,13 @@
         </div>
     </article>
   </div>
-    <article class="mb-5 container blog">
+  <div class="blog" id="blog">
+    <article class="mb-5 container">
       <h2>BLOG</h2>
       <div class="row">
-        <div class="col-md-8 my-5">
+        <div class="col-md-8 mt-5">
           <div class="contenedor mb-5">
-            <img src="styles/img/articulo_big_01.png" alt="puente" class="img-fluid">
+            <img src="styles/img/articulo_big_01.png" alt="puente" class="w-100 img-fluid imagen-blog">
                 <div class="articulo-blog">
                       <div class="titulo-blog mt-3">
                          <h6>CIUDAD</h6>
@@ -123,7 +132,7 @@
                 </div>
           </div>
             <div class="contenedor">
-              <img src="styles/img/articulo_big_02.png" alt="bosque" class="img-fluid">
+              <img src="styles/img/articulo_big_02.png" alt="bosque" class="w-100 img-fluid imagen-blog">
                   <div class="articulo-blog">
                     <div class="titulo-blog mt-3">
                         <h6>AVENTURA</h6>
@@ -131,34 +140,31 @@
                     <div class="texto-articulo-blog">
                       <h3>Articulo de bosque</h3>
                       <p>Lugar poblado de árboles y arbustos. Área con una gran densidad de</p>
-                      <div class="mb-5 mt-3">
+                      <div class="mb-5 mt-3 actividad-blog">
                       <p><img src="styles/icons/time.png" alt="time"> Hace 15m</p>
                       </div>
                     </div>
                   </div>
             </div>
           </div>
-        <div class="col-md-4 my-5 articulos-laterales">
-          <div class="card mini-articulos mb-3">
+        <div class="col-md-4 mt-5 articulos-laterales">
+          <div class="card mini-articulos">
             <img src="styles/img/articulo_small_01.png" class="card-img-top" alt="Elefante">
-            <!-- clase al div para padding/margin -->
             <div class="texto-articulos-laterales mt-3">
               <h5>Articulo de elefante</h5>
               <p><img src="styles/icons/time.png" alt="time"> Hace 3h</p>
 
             </div>
           </div>
-          <div class="card mini-articulos mb-3">
+          <div class="card mini-articulos">
             <img src="styles/img/articulo_small_02.png" class="card-img-top" alt="Loro">
-            <!-- clase al div para padding/margin -->
             <div class="texto-articulos-laterales mt-3">
               <h5>Articulo de loro</h5>
               <p><img src="styles/icons/time.png" alt="time"> Hace 3h</p>
             </div >
           </div>
           <div class="card mini-articulos">
-            <img src="styles/img/articulo_small_03.png" class="card-img-top" alt="Camino">
-            <!-- clase al div para padding/margin -->
+            <img src="styles/img/articulo_small_03.png" class="card-img-top" alt="Camino">   
             <div class="texto-articulos-laterales mt-3">
               <h5>Articulo de camino</h5>
               <p><img src="styles/icons/time.png" alt="time"> Hace 3h</p>
@@ -167,6 +173,7 @@
         </div>
       </div>
     </article>
+  </div>
   </section>
   <footer class="bg-dark py-4">
     <div class="container">
@@ -187,10 +194,12 @@
         </div>
   </div>
   </footer>
+</div>
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
     crossorigin="anonymous"></script>
+    <!-- My JS -->
+    <script src="scripts/index.js"></script>
 </body>
-
 </html>

@@ -17,6 +17,7 @@ body {
 
 .barraNavegacion {
   min-height: 10vh;
+  box-shadow: 0px 3px 6px #00000029;
 }
 
 .barraNavegacion a {
@@ -25,6 +26,65 @@ body {
   font-weight: bolder;
   color: #cbd0d3;
 }
+
+@media (max-width: 991px){
+  .menu-normal{
+  display:none;
+  }
+}
+
+.boton-hamburguesa{
+  max-height: 50px;
+}
+
+@media (min-width: 991px){
+  .barra-lateral{
+    display:none
+  }
+}
+
+.sidenav {
+  height: 100%; 
+  width: 0; 
+  position: fixed; 
+  z-index: 1; 
+  top: 0;
+  right: 0;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 10px 20px #00000029;
+  overflow-x: hidden; 
+  padding-top: 60px; 
+  transition: 0.5s;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font: normal normal bold 18px/13px Montserrat;
+  letter-spacing: 0px;
+  color: #2A3037;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 50px;
+  margin-left: 50px;
+  font-weight: lighter;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
 /* Header */
 
 .fondo-header {
@@ -38,11 +98,27 @@ body {
   color: white;
 }
 
+.texto-header{
+  width: 50%;
+}
+
 .texto-header h2 {
   font: normal normal bold 48px/42px Montserrat;
 }
 .texto-header h3 {
   font: normal normal bold 24px/34px Montserrat;
+}
+
+@media (max-width: 767px){
+  .texto-header{
+    width: 100%;
+  }
+  .texto-header h2{
+    font: normal normal bold 24px/42px Montserrat;
+  }
+  .texto-header h3 {
+    font: normal normal bold 20px/34px Montserrat;
+  }
 }
 .texto-header p {
   font: normal normal normal 16px/26px Montserrat;
@@ -54,6 +130,7 @@ hr {
 }
 
 .recuadro-header {
+  float: left;
   background: rgba(42, 48, 55, 0.5) 0% 0% no-repeat padding-box;
   border: 2px dashed #ffffff;
   border-radius: 6px;
@@ -73,6 +150,20 @@ hr {
   font: normal normal 300 14px/22px Montserrat;
 }
 
+.contenido-header{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+}
+
+@media (max-width: 985px){
+  .recuadro-header{
+    display: none;
+  }
+  .contenido-header p{
+    display: none; 
+  }
+}
 /* tendencias */
 
 .tendencias {
@@ -81,6 +172,7 @@ hr {
 
 .tendencias h2 {
   font: normal normal bold 24px/20px Montserrat;
+  color: #2a3037;
   margin-bottom: 50px;
 }
 
@@ -101,7 +193,45 @@ hr {
   color: #7a838d;
 }
 
+.cartel-nuevo{
+  background: #FA6980 0% 0% no-repeat padding-box;
+  border-radius: 6px;
+  font: normal normal bold 16px/13px Montserrat;
+  color: #FFFFFF;
+  padding: 10px;
+  width: 83px;
+  height: 32px;
+  position: absolute;
+  left: 20px;
+  bottom: 35%;
+}
+
+@media (max-width: 1200px){
+  .cartel-nuevo{
+    bottom: 40%;
+  }
+}
+
+@media (max-width: 767px){
+  .cartel-nuevo{
+    bottom: 40%;
+  }
+}
+
+@media (max-width: 767px) {
+  .ocultar-tendencias{
+    display: none;
+  }
+  .carta-tendencias{
+    margin: 0 10px;
+  }
+}
+
 /* Articulos de blog */
+
+.blog{
+  background: linear-gradient(0deg, #ffffff 80%, #ebebeb 10%);
+}
 
 .blog h2 {
   font: normal normal bold 24px/20px Montserrat;
@@ -135,8 +265,20 @@ hr {
 
 .actividad-blog {
   font: normal normal normal 13px/26px Montserrat;
-
   color: #cbd0d3;
+}
+
+@media (max-width:767px){
+  .imagen-blog{
+    min-height: 50vh;
+    width: 100vh;
+  }
+  .texto-articulo-blog p{
+display: none;
+  }
+  .actividad-blog p{
+    display: block;
+  }
 }
 /* Miniarticulos */
 
@@ -163,8 +305,13 @@ hr {
 
 .texto-articulos-laterales p {
   font: normal normal normal 13px/26px Montserrat;
-
   color: #cbd0d3;
+}
+
+@media (max-width: 767px) {
+  .articulos-laterales{
+    display: none;
+  }
 }
 
 /* Footer */
